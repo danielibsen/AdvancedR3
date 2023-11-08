@@ -2,8 +2,12 @@
 title: "Draft Quarto document"
 author: "Your Name"
 format: html
-execute:
-  echo: true
+execute: 
+    echo: true
+editor: 
+    markdown:
+        wrap: 72
+        canonical: true 
 ---
 
 ## Header 1
@@ -17,3 +21,7 @@ knitr::opts_chunk$set(echo = TRUE)
 # Code chunk
 ```
 
+## This is poorly formatted
+
+-   Definitely should have an empty space above this list.
+-   This isn't a list, why not?
