@@ -1,8 +1,3 @@
-# Created by use_targets().
-# Follow the comments below to fill in this target script.
-# Then follow the manual to check and run the pipeline:
-#   https://books.ropensci.org/targets/walkthrough.html#inspect-the-pipeline
-
 # Load packages required to define the pipeline:
 library(targets)
 # library(tarchetypes) # Load other packages as needed.
@@ -22,7 +17,7 @@ tar_option_set(
   # Alternatively, if you want workers to run on a high-performance computing
   # cluster, select a controller from the {crew.cluster} package. The following
   # example is a controller for Sun Grid Engine (SGE).
-  # 
+  #
   #   controller = crew.cluster::crew_controller_sge(
   #     workers = 50,
   #     # Many clusters install R as an environment module, and you can load it
