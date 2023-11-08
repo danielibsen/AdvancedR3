@@ -6,5 +6,8 @@ Imports:
     knitr,
     rmarkdown,
     here,
-    usethis
+    usethis,
+    readxl,
+    dplyr,
+    tidyr
 Encoding: UTF-8
