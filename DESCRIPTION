@@ -1,0 +1,10 @@
+Package: AdvancedR3
+Title: Learning advanced R
+Type: Project
+Version: 0.0.1
+Imports:
+    knitr,
+    rmarkdown,
+    here,
+    usethis
+Encoding: UTF-8
