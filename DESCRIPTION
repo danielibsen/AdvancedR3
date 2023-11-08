@@ -15,3 +15,5 @@ Imports:
     snakecase,
     readr
 Encoding: UTF-8
+Suggests: 
+    renv

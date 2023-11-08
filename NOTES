@@ -25,4 +25,8 @@ Can set things it should always do once you restart
 
 #renv workflow
 
+#types of dependencies
+- import: build - to run the code and build
+- suggest: workflow - to work on the workflow, e.g. usethis. This is not necessary to build.
+
 
