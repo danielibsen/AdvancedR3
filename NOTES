@@ -5,5 +5,12 @@ Useful commands
 #Installing packages from the description file
 remotes::install_deps()
 
+#installing all packages in the project
+renv::install()
+
 #Adding a package to the description file
 usethis::use_package("packagename")
+
+#Initiate renv - here specifying that it should only use the description file
+renv::init(bare = TRUE)
+
