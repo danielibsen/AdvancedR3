@@ -1,0 +1,4 @@
+name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
+descriptive_stats|function|8480c80748b44416
+lipidomics|stem|6c7c870951074622|0756cd438d0e8690|ef46db3751d8e999|-1170387675||t19669.6366651818s|30e7dd23cf8c9239|4884|rds|local|vector|||0.28|package tibble was built under R version 4.3.2|
+basic_stats_metabolites_mean_sd|stem|a49e89a26ecbd55a|06bc50c38cf95e77|ea52aefdcaf872e2|428912467||t19669.6366672638s|a0252f4d8dc0f410|403|rds|local|vector|||0.16||
