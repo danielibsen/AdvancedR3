@@ -13,7 +13,8 @@ Imports:
     stringr,
     fs,
     snakecase,
-    readr
+    readr,
+    targets
 Encoding: UTF-8
 Suggests: 
     gitcreds,
