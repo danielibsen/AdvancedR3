@@ -27,6 +27,6 @@ Can set things it should always do once you restart
 
 #types of dependencies
 - import: build - to run the code and build
-- suggest: workflow - to work on the workflow, e.g. usethis. This is not necessary to build.
+- suggest: workflow - to work on the workflow, e.g. usethis, renv. This is not necessary to build.
 
 
