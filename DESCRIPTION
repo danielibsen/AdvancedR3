@@ -16,4 +16,7 @@ Imports:
     readr
 Encoding: UTF-8
 Suggests: 
+    gitcreds,
     renv
+URL: https://github.com/danielibsen/AdvancedR3
+BugReports: https://github.com/danielibsen/AdvancedR3/issues
