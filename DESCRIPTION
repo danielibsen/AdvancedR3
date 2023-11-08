@@ -9,5 +9,9 @@ Imports:
     usethis,
     readxl,
     dplyr,
-    tidyr
+    tidyr,
+    stringr,
+    fs,
+    snakecase,
+    readr
 Encoding: UTF-8
