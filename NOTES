@@ -1,0 +1,9 @@
+Notes from the course
+
+Useful commands
+
+#Installing packages from the description file
+remotes::install_deps()
+
+#Adding a package to the description file
+usethis::use_package("packagename")
