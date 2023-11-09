@@ -51,33 +51,6 @@ targets::tar_read(fig_metabolite_distributions)
 
 ```{r building-model}
 
-log_reg_specs <- logistic_reg() %>% 
-    set_engine("glm")
-log_reg_specs
-
-lipidomics %>% 
-    count(code, metabolite) %>% 
-    filter(n > 1)
-
-lipidomics_wide <- lipidomics %>%
-  mutate(metabolite = snakecase::to_snake_case(metabolite)) %>%
-  pivot_wider(
-    names_from = metabolite,
-    values_from = value,
-    values_fn = mean,
-    names_prefix = "metabolite_"
-  )
-lipidomics_wide
-
-lipidomics %>%
-  column_values_to_snake_case() %>% 
-    glimpse()
-
-lipidomics %>%
-    metabolites_to_wider() %>% 
-    str()
-
-
 create_model_workflow(
   logistic_reg() %>%
     set_engine("glm"), #model specs
@@ -86,4 +59,5 @@ create_model_workflow(
 ) %>%
   fit(lipidomics_wide) %>% #why using fit and data here?
   tidy_model_output()
+
 ```
