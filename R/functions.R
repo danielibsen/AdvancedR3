@@ -31,3 +31,74 @@ plot_metabolite_distribution <- function(cleaned_dataset) {
 
     return(plot)
 }
+
+# Col values to snakecase-------------------------------------------------------
+#' Making a plot of the metabolites
+#'
+#' @param data cleaned Lipidomics dataset.
+#' @param cols columns
+#'
+#' @return metabolite names to snakecase
+#'
+column_values_to_snake_case <- function(data, cols) {
+    data %>%
+        dplyr::mutate(dplyr::across({{ cols }}, snakecase::to_snake_case))
+}
+
+# get dataset with metabolites in wide format-----------------------------------
+#' Metabolites in wide dataset format
+#'
+#' @param data cleaned Lipidomics dataset.
+#' @param cols columns
+#'
+#' @return A wide data frame
+#'
+metabolites_to_wider <- function(data) {
+    data %>%
+        tidyr::pivot_wider(
+            names_from = metabolite,
+            values_from = value,
+            values_fn = mean,
+            names_prefix = "metabolite_"
+        )
+}
+
+# Using recipe and normalize metabolites----------------------------------------
+#' Metabolites in wide dataset format
+#'
+#' @param data cleaned Lipidomics dataset.
+#' @param metabolite_variable metabolite variable column
+#'
+#' @return recipe and normalized metabolite values
+#'
+create_recipe_spec <- function(data, metabolite_variable) {
+    recipes::recipe(lipidomics_wide) %>%
+        recipes::update_role({{ metabolite_variable }}, age, gender, new_role = "predictor") %>%
+        recipes::update_role(class, new_role = "outcome") %>%
+        recipes::step_normalize(tidyselect::starts_with("metabolite_"))
+}
+
+#' Create a workflow object of the model and transformations--------------------
+#'
+#' @param model_specs The model specs
+#' @param recipe_specs The recipe specs
+#'
+#' @return A workflow object
+#'
+create_model_workflow <- function(model_specs, recipe_specs) {
+    workflows::workflow() %>%
+        workflows::add_model(model_specs) %>%
+        workflows::add_recipe(recipe_specs)
+}
+
+#' Create a tidy output of the model results------------------------------------
+#'
+#' @param workflow_fitted_model The model workflow object that has been fitted.
+#'
+#' @return A data frame.
+#'
+tidy_model_output <- function(workflow_fitted_model) {
+    workflow_fitted_model %>%
+        workflows::extract_fit_parsnip() %>%
+        broom::tidy(exponentiate = TRUE)
+}
