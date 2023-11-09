@@ -56,5 +56,9 @@ list(
   tar_target(
     name = basic_stats_metabolites_mean_sd,
     command = descriptive_stats(lipidomics)
+  ),
+  tar_target(
+      name = fig_metabolite_distributions,
+      command = plot_metabolite_distribution(lipidomics)
   )
 )
