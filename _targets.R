@@ -21,7 +21,7 @@ list(
     ),
   tar_target(
     name = lipidomics,
-    command = readr::read_csv(here::here("data/lipidomics.csv"))
+    command = readr::read_csv(file, show_col_types = FALSE)
   ),
   tar_target(
     name = basic_stats_metabolites_mean_sd,
