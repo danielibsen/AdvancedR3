@@ -14,8 +14,10 @@ editor:
 
 ```{r setup}
 knitr::opts_chunk$set(echo = TRUE)
+targets::tar_config_set(store = here::here("_targets"))
 
 library(tidyverse)
+library(targets)
 
 source(here::here("R", "functions.R"))
 
@@ -28,21 +30,18 @@ lipidomics <- readr::read_csv(here::here("data", "lipidomics.csv"))
 ```{r basic-stats}
 # getting the mean and sd of each metabolite
 
-lipidomics %>% 
-    group_by(metabolite) %>% 
-    summarise(across(value, list(mean = mean, sd = sd))) %>% 
-    mutate(across(where(is.numeric), ~round(.x, digits = 1)))
+targets::tar_read(basic_stats_metabolites_mean_sd) %>% 
+    mutate(MeanSD = glue::glue("{value_mean} ({value_sd})")) %>% 
+    select(Metabolite = metabolite, `Mean SD` = MeanSD) %>%
+    knitr::kable(caption = "Descriptive statistics of the metabolites.")
 
 ```
 
 ## Creating figure of metabolite levels
 
 ```{r metabolite-figure}
+#  making plot of distributions of metabolites
 
-metabolite_distribution_plot <- ggplot(lipidomics, aes(x = value)) +
-    geom_histogram() +
-    facet_wrap(vars(metabolite), scales = "free")
-
-plot_metabolite_distribution(lipidomics)
+targets::tar_read(fig_metabolite_distributions)
 
 ```
