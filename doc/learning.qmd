@@ -17,9 +17,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 library(tidyverse)
 
-source(here::here("R/functions.R"))
+source(here::here("R", "functions.R"))
 
-lipidomics <- read_csv(here::here("data/lipidomics.csv"))
+lipidomics <- readr::read_csv(here::here("data", "lipidomics.csv"))
 
 ```
 
@@ -32,5 +32,17 @@ lipidomics %>%
     group_by(metabolite) %>% 
     summarise(across(value, list(mean = mean, sd = sd))) %>% 
     mutate(across(where(is.numeric), ~round(.x, digits = 1)))
+
+```
+
+## Creating figure of metabolite levels
+
+```{r metabolite-figure}
+
+metabolite_distribution_plot <- ggplot(lipidomics, aes(x = value)) +
+    geom_histogram() +
+    facet_wrap(vars(metabolite), scales = "free")
+
+plot_metabolite_distribution(lipidomics)
 
 ```

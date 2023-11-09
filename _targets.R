@@ -4,7 +4,7 @@ library(targets)
 
 # Set target options:
 tar_option_set(
-  packages = c("tibble") # packages that your targets need to run
+  packages = unique(renv::dependencies(quiet = TRUE)$Package) # packages that your targets need to run
   # format = "qs", # Optionally set the default storage format. qs is fast.
   #
   # For distributed computing in tar_make(), supply a {crew} controller
@@ -44,6 +44,11 @@ tar_source()
 
 # Replace the target list below with your own:
 list(
+  tar_target(
+      name = file,
+      command = "data/lipidomics.csv",
+      format = "file"
+    ),
   tar_target(
     name = lipidomics,
     command = readr::read_csv(here::here("data/lipidomics.csv"))

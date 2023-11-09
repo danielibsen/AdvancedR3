@@ -14,7 +14,8 @@ Imports:
     fs,
     snakecase,
     readr,
-    targets
+    targets,
+    ggplot2
 Encoding: UTF-8
 Suggests: 
     gitcreds,
