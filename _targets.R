@@ -31,6 +31,10 @@ list(
       name = fig_metabolite_distributions,
       command = plot_metabolite_distribution(lipidomics)
   ),
+  tar_target(
+      name = df_model_estimates,
+      command = calculate_estimates(lipidomics)
+  ),
   tar_quarto(
       name = quarto_doc,
       path = "doc/learning.qmd"

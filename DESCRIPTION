@@ -21,7 +21,8 @@ Imports:
     parsnip,
     recipes,
     workflows,
-    broom
+    broom,
+    purrr
 Encoding: UTF-8
 Suggests: 
     gitcreds,
