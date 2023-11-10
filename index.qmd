@@ -3,6 +3,14 @@
 Website build from attending course [Advanced
 R](https://r-cubed-advanced.rostools.org/)
 
+## Project overview
+
+```{r overview, warning=FALSE}
+
+targets::tar_visnetwork()
+
+```
+
 In the intricate landscape of cellular function, lipids emerge as
 pivotal players, influencing a myriad of biological processes from
 energy storage to cellular signaling. Understanding the diverse roles of
