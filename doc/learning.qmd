@@ -1,6 +1,6 @@
 ---
-title: "Draft Quarto document"
-author: "Your Name"
+title: "Lipidomics analysis"
+author: "Daniel Ibsen"
 format: html
 execute: 
     echo: true
@@ -12,8 +12,8 @@ editor:
 
 ## 
 
-```{r setup}
-knitr::opts_chunk$set(echo = TRUE)
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE)
 targets::tar_config_set(store = here::here("_targets"))
 
 library(tidyverse)
@@ -44,9 +44,23 @@ targets::tar_read(basic_stats_metabolites_mean_sd) %>%
 targets::tar_read(fig_metabolite_distributions)
 ```
 
-## Running multiple models
+## Table of model estimates
 
 ```{r multiple-models}
 
+targets::tar_read(df_model_estimates) %>%
+    select(Metabolite = metabolite,
+           Estimate = estimate,
+           `Standard error` = std.error,
+           `p-value` = p.value) %>%
+    knitr::kable(caption = "Estimates of metabolites", digits = 3)
+
+```
+
+## Figure of model estimates
+
+```{r estimates-figure}
+
+targets::tar_read(fig_model_estimates)
 
 ```

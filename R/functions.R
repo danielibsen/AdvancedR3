@@ -164,3 +164,23 @@ calculate_estimates <- function(data) {
         dplyr::filter(stringr::str_detect(term, "metabolite_")) %>%
         add_original_metabolite_names(data)
 }
+
+#' Plot model estimates
+#'
+#' @param results
+#'
+#' @return plot
+#'
+plot_estimates <- function(results) {
+    results %>%
+        mutate(Estimate = estimate,
+               Metabolite = metabolite) %>%
+        ggplot(aes(
+            x = Estimate,
+            y = Metabolite,
+            xmin = Estimate - std.error,
+            xmax = Estimate + std.error
+        )) +
+        geom_pointrange() +
+        coord_fixed(xlim = c(0, 5))
+}
