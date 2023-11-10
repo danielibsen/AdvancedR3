@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "doc/learning.html#basic-statistics",
+    "href": "doc/learning.html#basic-statistics",
+    "title": "Lipidomics analysis",
+    "section": "Basic statistics",
+    "text": "Basic statistics\n\n\n\nDescriptive statistics of the metabolites.\n\n\nMetabolite\nMean SD\n\n\n\n\nCDCl3 (solvent)\n180 (67)\n\n\nCholesterol\n18.6 (11.4)\n\n\nFA -CH2CH2COO-\n33.6 (7.8)\n\n\nLipid -CH2-\n536.6 (61.9)\n\n\nLipid CH3- 1\n98.3 (73.8)\n\n\nLipid CH3- 2\n168.2 (29.2)\n\n\nMUFA+PUFA\n32.9 (16.1)\n\n\nPUFA\n30 (24.1)\n\n\nPhosphatidycholine\n31.7 (20.5)\n\n\nPhosphatidylethanolamine\n10 (7.6)\n\n\nPhospholipids\n2.7 (2.6)\n\n\nTMS (interntal standard)\n123 (130.4)"
+  },
+  {
+    "objectID": "doc/learning.html#creating-figure-of-metabolite-levels",
+    "href": "doc/learning.html#creating-figure-of-metabolite-levels",
+    "title": "Lipidomics analysis",
+    "section": "Creating figure of metabolite levels",
+    "text": "Creating figure of metabolite levels\n\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`."
+  },
+  {
+    "objectID": "doc/learning.html#table-of-model-estimates",
+    "href": "doc/learning.html#table-of-model-estimates",
+    "title": "Lipidomics analysis",
+    "section": "Table of model estimates",
+    "text": "Table of model estimates\n\n\n\nEstimates of metabolites\n\n\nMetabolite\nEstimate\nStandard error\np-value\n\n\n\n\nTMS (interntal standard)\n0.056\n0.990\n0.004\n\n\nCholesterol\n2.968\n0.458\n0.017\n\n\nLipid CH3- 1\n44.473\n1.406\n0.007\n\n\nLipid CH3- 2\n0.885\n0.361\n0.734\n\n\nLipid -CH2-\n0.003\n3.139\n0.058\n\n\nFA -CH2CH2COO-\n1.524\n0.387\n0.276\n\n\nPUFA\n3.269\n0.560\n0.034\n\n\nPhosphatidylethanolamine\n26.881\n1.324\n0.013\n\n\nPhosphatidycholine\n0.000\n116628.112\n0.998\n\n\nPhospholipids\n0.000\n68964.221\n1.000\n\n\nMUFA+PUFA\n0.456\n0.449\n0.080\n\n\nCDCl3 (solvent)\n0.087\n0.865\n0.005"
+  },
+  {
+    "objectID": "doc/learning.html#figure-of-model-estimates",
+    "href": "doc/learning.html#figure-of-model-estimates",
+    "title": "Lipidomics analysis",
+    "section": "Figure of model estimates",
+    "text": "Figure of model estimates"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Lipidomics analysis",
+    "section": "",
+    "text": "Lipidomics analysis"
+  }
+]
