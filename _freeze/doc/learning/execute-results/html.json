@@ -1,0 +1,16 @@
+{
+  "hash": "a048159dee7cf5dc028c8ddf7784a9ce",
+  "result": {
+    "markdown": "---\ntitle: \"Lipidomics analysis\"\nauthor:\n  - name: Daniel Ibsen\n    orcid: 0000-0002-7038-4770\n    email: dbi@ph.au.dk\n    affiliations:\n      - name: Steno Diabetes Center Aarhus\n        address: Palle Juul-Jensens Blvd. 10\n        city: Aarhus N\n        postal-code: 8200\nformat: html\nexecute: \n    echo: true\neditor: \n    markdown:\n        wrap: 72\n        canonical: true \n---\n\n\n## \n\n\n\n\n\n## Basic statistics\n\n\n::: {.cell}\n::: {.cell-output-display}\nTable: Descriptive statistics of the metabolites.\n\n|Metabolite               |Mean SD      |\n|:------------------------|:------------|\n|CDCl3 (solvent)          |180 (67)     |\n|Cholesterol              |18.6 (11.4)  |\n|FA -CH2CH2COO-           |33.6 (7.8)   |\n|Lipid -CH2-              |536.6 (61.9) |\n|Lipid CH3- 1             |98.3 (73.8)  |\n|Lipid CH3- 2             |168.2 (29.2) |\n|MUFA+PUFA                |32.9 (16.1)  |\n|PUFA                     |30 (24.1)    |\n|Phosphatidycholine       |31.7 (20.5)  |\n|Phosphatidylethanolamine |10 (7.6)     |\n|Phospholipids            |2.7 (2.6)    |\n|TMS (interntal standard) |123 (130.4)  |\n:::\n:::\n\n\n## Creating figure of metabolite levels\n\n\n::: {.cell}\n::: {.cell-output .cell-output-stderr}\n```\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n```\n:::\n\n::: {.cell-output-display}\n![](learning_files/figure-html/metabolite-figure-1.png){width=672}\n:::\n:::\n\n\n## Table of model estimates\n\n\n::: {.cell}\n::: {.cell-output-display}\nTable: Estimates of metabolites\n\n|Metabolite               | Estimate| Standard error| p-value|\n|:------------------------|--------:|--------------:|-------:|\n|TMS (interntal standard) |    0.056|          0.990|   0.004|\n|Cholesterol              |    2.968|          0.458|   0.017|\n|Lipid CH3- 1             |   44.473|          1.406|   0.007|\n|Lipid CH3- 2             |    0.885|          0.361|   0.734|\n|Lipid -CH2-              |    0.003|          3.139|   0.058|\n|FA -CH2CH2COO-           |    1.524|          0.387|   0.276|\n|PUFA                     |    3.269|          0.560|   0.034|\n|Phosphatidylethanolamine |   26.881|          1.324|   0.013|\n|Phosphatidycholine       |    0.000|     116628.112|   0.998|\n|Phospholipids            |    0.000|      68964.221|   1.000|\n|MUFA+PUFA                |    0.456|          0.449|   0.080|\n|CDCl3 (solvent)          |    0.087|          0.865|   0.005|\n:::\n:::\n\n\n## Figure of model estimates\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](learning_files/figure-html/estimates-figure-1.png){width=672}\n:::\n:::\n",
+    "supporting": [
+      "learning_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
