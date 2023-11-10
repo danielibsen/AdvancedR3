@@ -1,5 +1,5 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
-.Random.seed|object|84f027fe238bff5c|||||||||||||||
+.Random.seed|object|b41c7708e57efa47|||||||||||||||
 add_original_metabolite_names|function|ab21d023df5da19e|||||||||||||||
 basic_stats_metabolites_mean_sd|stem|a49e89a26ecbd55a|06bc50c38cf95e77|ea52aefdcaf872e2|428912467||t19669.6366672638s|a0252f4d8dc0f410|403|rds|local|vector|||0.16||
 calculate_estimate|function|26dfc5109833a5de|||||||||||||||
@@ -11,12 +11,13 @@ descriptive_stats|function|8480c80748b44416|||||||||||||||
 df_model_estimates|stem|75c06c02d52604e8|c54121e4cf891739|bd91b550717def6b|694756191||t19671.3786706703s|dff923d388a70b81|856|rds|local|vector|||0.74|glm.fit algorithm did not converge. glm.fit fitted probabilities numerically 0 or 1 occurred. glm.fit fitted probabilities numerically 0 or 1 occurred|
 fig_metabolite_distributions|stem|2de4285dd7a05bc9|9b96d4c2c553d20b|1dff93b10b094362|-1646598155||t19670.3848483223s|6c3f5ba49bc48316|84456|rds|local|vector|||0.02||
 fig_model_estimates|stem|420a78f97ee2eadb|16a1b6385d9d61a3|d0f123dee8d9a0ec|1462996731||t19671.4179108774s|5781dff85155297e|54045|rds|local|vector|||0.02||
-file|stem|301125be9d4645ea|6f5a37980713f8c6|ef46db3751d8e999|-1301001980|data/lipidomics.csv|t19640.5179282262s|6f631a918b070454|24313|file|local|vector|||0.01|package tibble was built under R version 4.3.2|
+file|stem|768e973db5d94bf7|6f5a37980713f8c6|ef46db3751d8e999|-1301001980|data/lipidomics.csv|t19671.4786844629s|d4615a4de7b11c6d|24818|file|local|vector|||1.97|package usethis was built under R version 4.3.2. package readr was built under R version 4.3.2. package dplyr was built under R version 4.3.2. package fs was built under R version 4.3.2. package here was built under R version 4.3.2. package readxl was built under R version 4.3.2. package snakecase was built under R version 4.3.2. package stringr was built under R version 4.3.2. package tidyr was built under R version 4.3.2. package knitr was built under R version 4.3.2. package rmarkdown was built under R version 4.3.2. package ggplot2 was built under R version 4.3.2. package quarto was built under R version 4.3.2. package parsnip was built under R version 4.3.2. package recipes was built under R version 4.3.2. package workflows was built under R version 4.3.2. package broom was built under R version 4.3.2. package purrr was built under R version 4.3.2. package tidymodels was built under R version 4.3.2. package dials was built under R version 4.3.2. package scales was built under R version 4.3.2. package infer was built under R version 4.3.2. package modeldata was built under R version 4.3.2. package rsample was built under R version 4.3.2. package tibble was built under R version 4.3.2. package tune was built under R version 4.3.2. package workflowsets was built under R version 4.3.2. package yardstick was built under R version 4.3.2. package tidyverse was built under R version 4.3.2. package forcats was built under R version 4.3.2. package lubridate was built under R version 4.3.2. package glue was built under R version 4.3.2. package tidyselect was built under R version 4.3.2|
 generate_model_results|function|6a9305f91da0e052|||||||||||||||
-lipidomics|stem|6c7c870951074622|7940706ee8ea8eb8|74cf55e34db4cd4e|-1170387675||t19670.3893975627s|30e7dd23cf8c9239|4884|rds|local|vector|||0.1||
+lipidomics|stem|6c7c870951074622|7940706ee8ea8eb8|20e349d4e45942fb|-1170387675||t19671.5371759242s|30e7dd23cf8c9239|4884|rds|local|vector|||0.15||
 metabolites_to_wider|function|8eff1105ed5e7f18|||||||||||||||
 plot_estimates|function|fb625f9a7030693c|||||||||||||||
 plot_metabolite_distribution|function|312c55bd83b5f575|||||||||||||||
 quarto_doc|stem|dcdbf5decf2495b9|0ddf6da320445a94|1900d18621fb4593|1886859688|doc/learning.html*doc/learning.qmd|t19671.4293379644s|e5f3d814a5ab03b6|18124|file|local|vector|||8.64||
+quarto_website|stem|a79f64c7c3b5c920|d17be6986dd630e9|1900d18621fb4593|1602464050|_site*doc/learning.qmd*index.qmd*LICENSE.md*_quarto.yml|t19671.5372121503s|12543ec667783462|1048452|file|local|vector|||3.16||
 split_by_metabolite|function|a2e9ee2dd226dea7|||||||||||||||
 tidy_model_output|function|4ff0d9127acce476|||||||||||||||
