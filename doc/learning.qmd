@@ -1,6 +1,14 @@
 ---
 title: "Lipidomics analysis"
-author: "Daniel Ibsen"
+author:
+  - name: Daniel Ibsen
+    orcid: 0000-0002-7038-4770
+    email: dbi@ph.au.dk
+    affiliations:
+      - name: Steno Diabetes Center Aarhus
+        address: Palle Juul-Jensens Blvd. 10
+        city: Aarhus N
+        postal-code: 8200
 format: html
 execute: 
     echo: true

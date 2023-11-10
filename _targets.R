@@ -40,7 +40,7 @@ list(
       command = plot_estimates(df_model_estimates)
   ),
   tar_quarto(
-      name = quarto_doc,
-      path = "doc/learning.qmd"
+      name = quarto_website,
+      path = "."
   )
 )
